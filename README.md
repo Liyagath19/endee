@@ -1,139 +1,162 @@
-<p align="center">
-  <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="docs/assets/logo-light.svg">
-      <img height="100" alt="Endee" src="docs/assets/logo-dark.svg">
-  </picture>
-</p>
+# 🌍 Carbon Footprint Calculator
 
-<p align="center">
-    <b>High-performance open-source vector database for AI search, RAG, semantic search, and hybrid retrieval.</b>
-</p>
+A simple and interactive **Carbon Footprint Calculator** that helps users estimate their **annual carbon emissions** based on daily lifestyle activities such as electricity usage, transportation, and diet.
 
-<p align="center">
-    <a href="./docs/getting-started.md"><img src="https://img.shields.io/badge/Quick_Start-Local_Setup-success?style=flat-square" alt="Quick Start"></a>
-    <a href="https://docs.endee.io/quick-start"><img src="https://img.shields.io/badge/Docs-Quick_Start-success?style=flat-square" alt="Docs"></a>
-    <a href="https://github.com/endee-io/endee/blob/master/LICENSE"><img src="https://img.shields.io/github/license/endee-io/endee?style=flat-square" alt="License"></a>
-    <a href="https://discord.gg/5HFGqDZQE3"><img src="https://img.shields.io/badge/Discord-Join_Chat-5865F2?logo=discord&style=flat-square" alt="Discord"></a>
-    <a href="https://endee.io/"><img src="https://img.shields.io/badge/Website-Endee-111111?style=flat-square" alt="Website"></a>
-    <!-- <a href="https://endee.io/benchmarks"><img src="https://img.shields.io/badge/Benchmarks-Coming_Soon-1F8B4C?style=flat-square" alt="Benchmarks"></a> -->
-    <!-- <a href="https://endee.io/cloud"><img src="https://img.shields.io/badge/Cloud-Coming_Soon-2496ED?style=flat-square" alt="Cloud"></a> -->
-</p>
+This project is designed to raise awareness about personal environmental impact by providing instant carbon emission estimates and eco-friendly suggestions to reduce emissions.
 
-<p align="center">
-<strong><a href="./docs/getting-started.md">Quick Start</a> • <a href="#why-endee">Why Endee</a> • <a href="#use-cases">Use Cases</a> • <a href="#features">Features</a> • <a href="#api-and-clients">API and Clients</a> • <a href="#docs-and-links">Docs</a> • <a href="#community-and-contact">Contact</a></strong>
-</p>
+---
 
-# Endee: Open-Source Vector Database for AI Search
+## 🖥️ Live Demo
 
-**Endee** is a high-performance open-source vector database built for AI search and retrieval workloads. It is designed for teams building **RAG pipelines**, **semantic search**, **hybrid search**, recommendation systems, and filtered vector retrieval APIs that need production-oriented performance and control.
+🔗 **Live Website:**
+https://your-carbon-footprint-project.endee.io
 
-Endee combines vector search with filtering, sparse retrieval support, backup workflows, and deployment flexibility across local builds and Docker-based environments. The project is implemented in C++ and optimized for modern CPU targets, including AVX2, AVX512, NEON, and SVE2.
+🔗 **Source Code:**
+https://github.com/your-username/carbon-footprint-calculator
 
-If you want the fastest path to evaluate Endee locally, start with the [Getting Started guide](./docs/getting-started.md) or the hosted docs at [docs.endee.io](https://docs.endee.io/quick-start).
+---
 
-## Why Endee
+## 📌 Features
 
-- Built as a dedicated vector database for AI applications, search systems, and retrieval-heavy workloads.
-- Supports dense vector retrieval plus sparse search capabilities for hybrid search use cases.
-- Includes payload filtering for metadata-aware retrieval and application-specific query logic.
-- Ships with operational features already documented in this repo, including backup flows and runtime observability.
-- Offers flexible deployment paths: local scripts, manual builds, Docker images, and prebuilt registry images.
+* 🔢 Calculate annual carbon emissions instantly
+* ⚡ Estimate emissions from electricity usage
+* ⛽ Include natural gas and heating fuel usage
+* 🚗 Calculate emissions from car travel
+* ✈️ Add flight-related emissions
+* 🥗 Diet-based carbon estimation
+* 📊 Compare emissions with the global average
+* 💡 Eco-friendly recommendations to reduce footprint
+* 📱 Fully responsive design for mobile and desktop
 
-## Getting Started
+---
 
-The full installation, build, Docker, runtime, and authentication instructions are in [docs/getting-started.md](./docs/getting-started.md).
-
-Fastest local path:
+## 📂 Project Structure
 
 ```bash
-chmod +x ./install.sh ./run.sh
-./install.sh --release --avx2
-./run.sh
+carbon-footprint-calculator/
+│
+├── index.html      # Main HTML file with CSS and JavaScript
+└── README.md       # Project documentation
 ```
 
-The server listens on port `8080`. For detailed setup paths, supported operating systems, CPU optimization flags, Docker usage, and authentication examples, use:
+---
 
-- [Getting Started](./docs/getting-started.md)
-- [Hosted Quick Start Docs](https://docs.endee.io/quick-start)
+## 🚀 How It Works
 
-## Use Cases
+The calculator estimates annual carbon emissions based on:
 
-### RAG and AI Retrieval
+| Category     | Basis                        |
+| ------------ | ---------------------------- |
+| Electricity  | Monthly kWh usage            |
+| Natural Gas  | Monthly gas usage            |
+| Heating Fuel | Monthly fuel consumption     |
+| Car Travel   | Weekly kilometers driven     |
+| Flights      | Hours flown per year         |
+| Diet         | Fixed annual emission values |
 
-Use Endee as the retrieval layer for question answering, chat assistants, copilots, and other RAG applications that need fast vector search with metadata-aware filtering.
+---
 
-### Agentic AI and AI Agent Memory
+## 🧮 Emission Calculation Formula
 
-Use Endee as the long-term memory and context retrieval layer for AI agents built with frameworks like LangChain, CrewAI, AutoGen, and LlamaIndex. Store and retrieve past observations, tool outputs, conversation history, and domain knowledge mid-execution with low-latency filtered vector search, so your autonomous agents get the right context without stalling their reasoning loop.
+```text
+Total Emissions =
+Electricity + Gas + Heating Fuel + Car Travel + Flights + Diet Emissions
+```
 
-### Semantic Search
+The final result is displayed in **tons of CO₂ per year**, along with a comparison to the **average global carbon footprint**.
 
-Build semantic search experiences for documents, products, support content, and knowledge bases using vector similarity search instead of exact keyword-only matching.
+---
 
-### Hybrid Search
+## 🛠️ Technologies Used
 
-Combine dense retrieval, sparse vectors, and filtering to improve relevance for search workflows where both semantic understanding and term-level precision matter.
+* **HTML5** – Structure
+* **CSS3** – Styling and responsive layout
+* **JavaScript** – Calculation logic
+* **Font Awesome** – Icons
 
-### Recommendations and Matching
+---
 
-Support recommendation, similarity matching, and nearest-neighbor retrieval workflows across text, embeddings, and other high-dimensional representations.
+## ⚙️ Installation & Usage
 
-## Features
+1. Clone the repository:
 
-- **Vector search** for AI retrieval and semantic similarity workloads.
-- **Hybrid retrieval support** with sparse vector capabilities documented in [docs/sparse.md](./docs/sparse.md).
-- **Payload filtering** for structured retrieval logic documented in [docs/filter.md](./docs/filter.md).
-- **Backup APIs and flows** documented in [docs/backup-system.md](./docs/backup-system.md).
-- **Operational logging and instrumentation** documented in [docs/logs.md](./docs/logs.md) and [docs/mdbx-instrumentation.md](./docs/mdbx-instrumentation.md).
-- **CPU-targeted builds** for AVX2, AVX512, NEON, and SVE2 deployments.
-- **Docker deployment options** for local and server environments.
+```bash
+git clone https://github.com/your-username/carbon-footprint-calculator.git
+```
 
-## API and Clients
+2. Navigate to the project folder:
 
-Endee exposes an HTTP API for managing indexes and serving retrieval workloads. The current repo documentation and examples focus on running the server directly and calling its API endpoints.
+```bash
+cd carbon-footprint-calculator
+```
 
-Current developer entry points:
+3. Open `index.html` in your browser.
 
-- [Getting Started](./docs/getting-started.md) for local build and run flows
-- [Hosted Docs](https://docs.endee.io/quick-start) for product documentation
-- [Release Notes 1.0.0](https://github.com/endee-io/endee/releases/tag/1.0.0) for recent platform changes
+---
 
-## Docs and Links
+## 📸 Screenshot
 
-- [Getting Started](./docs/getting-started.md)
-- [Hosted Documentation](https://docs.endee.io/quick-start)
-- [Release Notes](https://github.com/endee-io/endee/releases/tag/1.0.0)
-- [Sparse Search](./docs/sparse.md)
-- [Filtering](./docs/filter.md)
-- [Backups](./docs/backup-system.md)
+Add your project screenshot here:
 
-## Community and Contact
+```md
+![Carbon Footprint Calculator Screenshot](screenshot.png)
+```
 
-- Join the community on [Discord](https://discord.gg/5HFGqDZQE3)
-- Visit the website at [endee.io](https://endee.io/)
-- For trademark or branding permissions, contact [enterprise@endee.io](mailto:enterprise@endee.io)
+---
 
-## Contributing
+## 🌱 Future Improvements
 
-We welcome contributions from the community to help make vector search faster and more accessible for everyone.
+* 🌍 Country-specific emission factors
+* 📈 Graphical emission analytics
+* 🔐 User login and carbon history tracking
+* ☁️ Backend integration for data storage
+* 📊 Real-time environmental data APIs
 
-- Submit pull requests for fixes, features, and improvements
-- Report bugs or performance issues through GitHub issues
-- Propose enhancements for search quality, performance, and deployment workflows
+---
 
-## License
+## 🤝 Contributing
 
-Endee is open source software licensed under the **Apache License 2.0**. See the [LICENSE](./LICENSE) file for full terms.
+Contributions are welcome.
 
-## Trademark and Branding
+1. Fork the repository
+2. Create your feature branch:
 
-“Endee” and the Endee logo are trademarks of Endee Labs.
+```bash
+git checkout -b feature-name
+```
 
-The Apache License 2.0 does not grant permission to use the Endee name, logos, or branding in a way that suggests endorsement or affiliation.
+3. Commit your changes:
 
-If you offer a hosted or managed service based on this software, you must use your own branding and avoid implying it is an official Endee service.
+```bash
+git commit -m "Add new feature"
+```
 
-## Third-Party Software
+4. Push to the branch:
 
-This project includes or depends on third-party software components licensed under their respective open-source licenses. Use of those components is governed by their own license terms.
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Liyagath R**
+
+🔗 GitHub:
+https://github.com/liyagath19
+
+---
+
+## 💡 Acknowledgements
+
+* Environmental calculation references inspired by global carbon emission studies
+* Icons provided by Font Awesome
